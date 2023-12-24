@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnlySol</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="/sitedesktop.png" alt="" class="desktop" usemap="#image-map" />
+    <img src="/mobilefullsite.png" alt="" class="mobile" usemap="#image-map2" />
+
+    <map name="image-map">
+      <area
+        target=""
+        alt="x"
+        title="x"
+        href="https://x.com/barkthedogcoin"
+        coords="752,76,877,194"
+        shape="rect"
+      />
+      <area
+        target=""
+        alt="telegram"
+        title="telegram"
+        href="https://t.me/barkdogportal"
+        coords="896,78,1023,205"
+        shape="rect"
+      />
+    </map>
+
+    <map name="image-map2">
+      <area
+        target=""
+        alt="x"
+        title="x"
+        href="https://x.com/barkthedogcoin"
+        coords="755,72,877,199"
+        shape="rect"
+      />
+      <area
+        target=""
+        alt="telegram"
+        title="telegram"
+        href="https://t.me/barkdogportal"
+        coords="898,69,1025,201"
+        shape="rect"
+      />
+    </map>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+      integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/rwdImageMaps.js"></script>
+    <script>
+      $(document).ready(function (e) {
+        $("img[usemap]").rwdImageMaps();
+      });
+    </script>
+  </body>
+</html>
