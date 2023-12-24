@@ -12,90 +12,136 @@
 
     <map name="image-map">
       <area
+        target="_blank"
+        alt="enter"
+        title="enter"
+        href="https://x.com/onlysolcoin"
+        coords="1156,590,1826,665"
+        shape="rect"
+      />
+      <area
+        id="map2"
+        alt="socials"
+        title="socials"
+        coords="1159,700,1822,773"
+        shape="rect"
+      />
+      <area
+        target="_blank"
         alt="telegram"
         title="telegram"
         href="https://t.me/onlysolcoin"
-        coords="1095,1713,1261,1752"
+        coords="1095,1713,1261,1759"
         shape="rect"
       />
       <area
-        alt="x"
-        title="x"
+        target="_blank"
+        alt="twitter"
+        title="twitter"
         href="https://x.com/onlysolcoin"
-        coords="1287,1710,1414,1757"
+        coords="1281,1711,1414,1759"
         shape="rect"
       />
       <area
+        id="socials"
+        target="_blank"
         alt="telegram"
         title="telegram"
         href="https://t.me/onlysolcoin"
-        coords="1032,2507,1592,2685"
+        coords="1027,2510,1614,2691"
         shape="rect"
       />
       <area
-        alt="x"
-        title="x"
+        target="_blank"
+        alt="twiiter"
+        title="twiiter"
         href="https://x.com/onlysolcoin"
-        coords="1048,2715,1597,2866"
+        coords="1039,2721,1609,2868"
         shape="rect"
       />
       <area
+        target="_blank"
         alt="telegram"
         title="telegram"
         href="https://t.me/onlysolcoin"
-        coords="784,8524,1120,8608"
+        coords="790,8516,1129,8614"
         shape="rect"
       />
       <area
-        alt="x"
-        title="x"
+        target="_blank"
+        alt="twitter"
+        title="twitter"
         href="https://x.com/onlysolcoin"
-        coords="1156,8514,1429,8609"
+        coords="1151,8511,1431,8613"
         shape="rect"
       />
     </map>
 
-    <map name="image-map">
+    <map name="image-map2">
       <area
+        target="_blank"
+        alt="twitter"
+        title="twitter"
+        href="https://x.com/onlysolcoin"
+        coords="216,1291,866,1366"
+        shape="rect"
+      />
+      <area
+        id="map2"
+        alt="socials2"
+        title="socials2"
+        coords="215,1399,862,1471"
+        shape="rect"
+        href="#"
+        onclick="scrollToMap2()"
+      />
+      <area
+        target="_blank"
         alt="telegram"
         title="telegram"
         href="https://t.me/onlysolcoin"
-        coords="421,2973,661,3034"
+        coords="405,2970,671,3040"
         shape="rect"
       />
       <area
-        alt="x"
-        title="x"
+        target="_blank"
+        alt="twitter"
+        title="twitter"
         href="https://x.com/onlysolcoin"
-        coords="695,2966,901,3043"
+        coords="695,2970,889,3038"
         shape="rect"
       />
       <area
+        id="socials2"
+        target="_blank"
         alt="telegram"
         title="telegram"
         href="https://t.me/onlysolcoin"
-        coords="177,4326,971,4549"
+        coords="170,4319,961,4552"
         shape="rect"
       />
       <area
-        alt="x"
-        title="x"
+        target="_blank"
+        alt="twitter"
+        title="twitter"
         href="https://x.com/onlysolcoin"
-        coords="187,4586,962,4757"
+        coords="174,4584,961,4760"
         shape="rect"
       />
       <area
+        target="_blank"
         alt="telegram"
         title="telegram"
         href="https://t.me/onlysolcoin"
-        coords="435,8780,636,8832"
+        coords="443,8781,632,8830"
         shape="rect"
       />
       <area
-        alt="x"
-        title="x"
+        target="_blank"
+        alt="twitter"
+        title="twitter"
         href="https://x.com/onlysolcoin"
-        coords="654,8785,807,8832"
+        coords="649,8777,810,8834"
         shape="rect"
       />
     </map>
@@ -110,6 +156,24 @@
       $(document).ready(function (e) {
         $("img[usemap]").rwdImageMaps();
       });
+    </script>
+    <script>
+      document.getElementById("map1").addEventListener("click", function () {
+        scrollToMap();
+      });
+
+      function scrollToMap() {
+        const mapElement = document.querySelector("#socials");
+        const height = mapElement.coords.split(",")[3] - window.innerHeight / 2;
+        window.scrollBy(0, height);
+      }
+    </script>
+    <script>
+      function scrollToMap2() {
+        const mapElement = document.querySelector("#socials2");
+        const height = mapElement.coords.split(",")[3];
+        window.scrollBy(0, height);
+      }
     </script>
   </body>
 </html>
