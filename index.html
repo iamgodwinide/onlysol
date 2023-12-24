@@ -170,7 +170,7 @@
     <script>
       function scrollToMap2() {
         const mapElement = document.querySelector("#socials2");
-        const height = mapElement.coords.split(",")[3];
+        const height = mapElement.coords.split(",")[3] - window.innerHeight / 2;
         window.scrollBy(0, height);
       }
     </script>
